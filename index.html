@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil Moderne - Mon Site</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* Section Hero (bannière principale) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x800/007bff/ffffff?text=Votre+Image+Hero') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Section Caractéristiques (Features) */
+.features {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* Section À Propos */
+.about {
+    background: #e9ecef;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Bienvenue sur Notre Site Moderne</h1>
+            <p>Découvrez nos services et notre approche innovante.</p>
+            <a href="#services" class="btn">En savoir plus</a>
+        </div>
+    </header>
+
+    <section id="services" class="features">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Design Créatif</h3>
+                    <p>Des designs uniques et attrayants pour votre marque.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Développement Web</h3>
+                    <p>Des solutions web robustes et performantes.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Support Continu</h3>
+                    <p>Une assistance fiable pour tous vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>À Propos de Nous</h2>
+            <p>Nous sommes une équipe passionnée dédiée à l'excellence et à l'innovation. Notre mission est de vous aider à atteindre vos objectifs numériques avec des solutions sur mesure.</p>
+            <a href="#" class="btn btn-secondary">Contactez-nous</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mon Site Moderne. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
