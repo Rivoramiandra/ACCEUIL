@@ -8,186 +8,247 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Importation de la police Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Styles généraux */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
+        /* Styles généraux */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
-}
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
 
-h1, h2, h3 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-/* Boutons */
-.btn {
-    display: inline-block;
-    color: #fff;
-    background: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        /* Boutons */
+        .btn {
+            display: inline-block;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-.btn:hover {
-    background: #0056b3;
-}
+        .btn:hover {
+            background: #0056b3;
+        }
 
-.btn-secondary {
-    background: #6c757d;
-}
+        .btn-secondary {
+            background: #6c757d;
+        }
 
-.btn-secondary:hover {
-    background: #5a6268;
-}
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
 
-/* Section Hero (bannière principale) */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x800/007bff/ffffff?text=Votre+Image+Hero') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
+        /* Styles de la Navbar */
+        .navbar {
+            background: #333;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky; /* Rends la navbar "collante" en haut */
+            top: 0;
+            z-index: 1000; /* Assure que la navbar est au-dessus des autres éléments */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    color: #fff;
-}
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Ajuste le padding pour le contenu de la navbar */
+        }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
 
-/* Section Caractéristiques (Features) */
-.features {
-    padding: 60px 0;
-    background: #fff;
-}
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Aligne les éléments de la liste horizontalement */
+        }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
+        .navbar ul li {
+            margin-left: 25px;
+        }
 
-.feature-item {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
 
-.feature-item:hover {
-    transform: translateY(-5px);
-}
+        .navbar ul li a:hover {
+            color: #007bff; /* Couleur au survol */
+        }
 
-.feature-item h3 {
-    color: #007bff;
-    margin-top: 0;
-}
+        /* Section Hero (bannière principale) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x800/007bff/ffffff?text=Votre+Image+Hero') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            padding-top: 150px; /* Ajuste pour la hauteur de la navbar */
+        }
 
-/* Section À Propos */
-.about {
-    background: #e9ecef;
-    padding: 60px 0;
-    text-align: center;
-}
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
 
-.about p {
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-}
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
 
-/* Footer */
-footer {
-    background: #eb1a1a;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-/* Section Contact */
-.contact-section {
-    background: #fff;
-    padding: 60px 0;
-    text-align: center;
-}
+        /* Section Caractéristiques (Features) */
+        .features {
+            padding: 60px 0;
+            background: #fff;
+        }
 
-.contact-section p {
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-}
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Aligne le texte du formulaire à gauche */
-}
+        .feature-item {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-}
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
 
-.form-group label {
-    display: block; /* Chaque label prend sa propre ligne */
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
+        .feature-item h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif; /* Garde la même police */
-}
+        /* Section À Propos */
+        .about {
+            background: #e9ecef;
+            padding: 60px 0;
+            text-align: center;
+        }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus {
-    border-color: #007bff; /* Met en évidence le champ actif */
-    outline: none; /* Supprime le contour par défaut du navigateur */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-}
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
 
-.contact-form .btn {
-    width: 100%; /* Le bouton prend toute la largeur du formulaire */
-    padding: 15px;
-    font-size: 1.1em;
-    cursor: pointer;
-    border: none; /* Supprime la bordure par défaut du bouton */
-}
+        /* Footer */
+        footer {
+            background: #eb1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* Section Contact */
+        .contact-section {
+            background: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-section p {
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Aligne le texte du formulaire à gauche */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block; /* Chaque label prend sa propre ligne */
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+            font-size: 1em;
+            font-family: 'Roboto', sans-serif; /* Garde la même police */
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: #007bff; /* Met en évidence le champ actif */
+            outline: none; /* Supprime le contour par défaut du navigateur */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+        .contact-form .btn {
+            width: 100%; /* Le bouton prend toute la largeur du formulaire */
+            padding: 15px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border: none; /* Supprime la bordure par défaut du bouton */
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Mon Site</a>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
             <h1>Bienvenue sur Notre Site Moderne</h1>
@@ -216,7 +277,14 @@ footer {
         </div>
     </section>
 
-<section id="contact" class="contact-section">
+    <section id="about" class="about"> <div class="container">
+            <h2>À Propos de Nous</h2>
+            <p>Nous sommes une équipe passionnée dédiée à l'excellence et à l'innovation. Notre mission est de vous aider à atteindre vos objectifs numériques avec des solutions sur mesure.</p>
+            <a href="#" class="btn btn-secondary">Contactez-nous</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contactez-nous</h2>
             <p>N'hésitez pas à nous contacter pour toute question ou demande de renseignements.</p>
@@ -237,6 +305,7 @@ footer {
             </form>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Mon Site Moderne. Tous droits réservés.</p>
